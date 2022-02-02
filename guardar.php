@@ -24,7 +24,7 @@
                     $Fecha = $_POST['Fecha'];
 	                $Editorial = $_POST['Editorial'];
                     $anio = $_POST['anio'];
-	                $libros = fopen("libros.txt", "w");
+	                $libros = fopen("libros.txt", "a+");
                     fputs($libros,  $nombresLibro);
                     fputs($libros,  "<br>");
                     fputs($libros,  $nombresAutor);
@@ -34,6 +34,7 @@
                     fputs($libros,  $Editorial);
                     fputs($libros,  "<br>");
                     fputs($libros,   $anio);
+		    fputs($libros,  "<br><br>");
 	                fclose($libros);
                 ?>
                 <?php
